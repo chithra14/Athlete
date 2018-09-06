@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+  <body>
+   <table>
+   <th> Enter information </th>
+   </table>
+   <table border="1">
+       <form  method="post" action="test/add">       
+         <tr>    
+          <td>Athelete Name: </td> 
+          <td><input type="text"  name="aname"  placeholder="Aname"
+      			pattern="[A-Z][a-z]{3,40}" required
+        title="Username should start with uppercase letter and must have length with 40. e.g. John">
+          </td>  
+         </tr>    
+         <tr>    
+          <td>Gender:</td>    
+          <td><input type="radio" name="agender" value="Male" required/>Male
+          <input type="radio" name="agender" value="Female"/>Female</td>  
+         </tr>
+         <tr>
+            <td>Category</td>
+            <td><select required aria-required="true" name="acategory">
+            <option></option>
+            <option value="Running">Running</option>
+            <option value="High Jump">High jump</option>
+            <option value="Hurdles">Hurdles</option>
+            <option value="Relay">Relay</option>
+            <option value="Javelin throw">Javelin throw</option>
+            <option value="Shot put">Shot put</option>
+            </select>
+         </tr>
+         <tr>    
+          <td>Email :</td>    
+          <td><input type="email" name="aemail"/></td>  
+         </tr>            
+         <tr>    
+         <td> Mobile : </td>
+         <td><input type="tel" required name="amobile" pattern="^[0-9]{10}$"  maxlength="10" title="Enter phone number of length 10" /></td>
+         </tr>
+        
+        <tr>
+    <td >
+    <input type='submit' value="ADD">
+     <input type='reset' value="CANCEL"> 
+     </td>
+     <td ><a href="Index.html"> home </a><br>
+     </td>
+</tr>
+        
+         </table>
+       </form>   
+       </body>
+       </html> 
+       
+       <!-- ^[0-9-+s()]{10}*$
+                 /^[A-Z][a-z0-9_-]{3,40}$/
+                  [a-z]{3,40}
+        oninvalid="setCustomValidity('Enter a valid phone number of length 10')" oninput="setCustomvalidity('')"
+        -->
